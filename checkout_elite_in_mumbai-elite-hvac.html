@@ -1,52 +1,9 @@
-import os
-import sys
-import logging
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    handlers=[logging.StreamHandler(sys.stdout)]
-)
-logger = logging.getLogger("UltimateUnstoppableCheckoutEngine")
-
-def generate_elite_nextlevel_checkout(business_name: str, niche: str, region: str) -> str:
-    slug = business_name.lower().replace(" ", "-")
-    filename = f"checkout_elite_{region.lower()}_{slug}.html"
-    
-    if region.upper() == "US":
-        amount = "$29.00"
-        payment_block = """
-            <a href="https://paypal.me/damodartechcraze" target="_blank" class="btn-paypal">Pay $29.00 via PayPal.me</a>
-            <div class="crypto-text">🪙 Crypto / Trust Wallet (USDT TRC20 Supported)</div>
-        """
-    else:
-        amount = "₹999.00"
-        payment_block = """
-            <div class="upi-container">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div><b>GPay / PhonePe:</b> <span id="upi1">damodartechcraze@okaxis</span></div>
-                    <button onclick="copyUpi('damodartechcraze@okaxis', this)" class="copy-btn">Copy</button>
-                </div>
-            </div>
-            <div class="upi-container" style="margin-top: 8px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div><b>Canara UPI:</b> <span id="upi2">923698947@cnrbs</span></div>
-                    <button onclick="copyUpi('923698947@cnrbs', this)" class="copy-btn">Copy</button>
-                </div>
-            </div>
-            <div style="text-align: center; margin: 10px 0; font-size: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">--- Or Scan UPI QR Code ---</div>
-            <div style="background: #fff; padding: 6px; border-radius: 8px; text-align: center; width: 100px; margin: 0 auto;">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=upi://pay?pa=damodartechcraze@okaxis&pn=DamodarTechCraze&am=999.00&cu=INR" alt="UPI QR Code" style="width: 100px; height: 100px; display: block; margin: 0 auto;">
-            </div>
-            <a href="upi://pay?pa=damodartechcraze@okaxis&pn=DamodarTechCraze&am=999.00&cu=INR" class="btn-upi">⚡ Pay ₹999 via UPI App (1-Click)</a>
-        """
-
-    template = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Activation Portal | __BUSINESS_NAME__</title>
+    <title>Elite Activation Portal | Mumbai Elite HVAC</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #060913; color: #f8fafc; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
         .card { background: #0f172a; padding: 25px; border-radius: 18px; box-shadow: 0 25px 50px rgba(0,0,0,0.7); width: 100%; max-width: 480px; border: 1px solid #1e293b; position: relative; overflow: hidden; }
@@ -99,7 +56,7 @@ def generate_elite_nextlevel_checkout(business_name: str, niche: str, region: st
         <div class="subtitle">Custom After-Hours Utility Portal</div>
         
         <div class="video-box">
-            <div class="video-placeholder" onclick="alert('Playing custom 30-sec developer walkthrough video for __BUSINESS_NAME__...')">
+            <div class="video-placeholder" onclick="alert('Playing custom 30-sec developer walkthrough video for Mumbai Elite HVAC...')">
                 ▶️ Watch 30-Sec Personalized Walkthrough
             </div>
         </div>
@@ -109,7 +66,7 @@ def generate_elite_nextlevel_checkout(business_name: str, niche: str, region: st
                 <div class="preview-icon">🌐</div>
                 <div style="font-size: 12px;">
                     <div style="color: #f8fafc; font-weight: bold;">Target Asset Verified</div>
-                    <div style="color: #38bdf8; font-family: monospace;">__BUSINESS_NAME__</div>
+                    <div style="color: #38bdf8; font-family: monospace;">Mumbai Elite HVAC</div>
                 </div>
             </div>
             <!-- Interactive Sandbox Preview Trigger -->
@@ -118,22 +75,40 @@ def generate_elite_nextlevel_checkout(business_name: str, niche: str, region: st
         
         <div class="price-box">
             <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">One-Time Setup Investment</div>
-            <div class="price-tag">__AMOUNT__</div>
+            <div class="price-tag">₹999.00</div>
         </div>
         
         <div class="pay-container">
-            __PAYMENT_BLOCK__
+            
+            <div class="upi-container">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div><b>GPay / PhonePe:</b> <span id="upi1">damodartechcraze@okaxis</span></div>
+                    <button onclick="copyUpi('damodartechcraze@okaxis', this)" class="copy-btn">Copy</button>
+                </div>
+            </div>
+            <div class="upi-container" style="margin-top: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div><b>Canara UPI:</b> <span id="upi2">923698947@cnrbs</span></div>
+                    <button onclick="copyUpi('923698947@cnrbs', this)" class="copy-btn">Copy</button>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 10px 0; font-size: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">--- Or Scan UPI QR Code ---</div>
+            <div style="background: #fff; padding: 6px; border-radius: 8px; text-align: center; width: 100px; margin: 0 auto;">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=upi://pay?pa=damodartechcraze@okaxis&pn=DamodarTechCraze&am=999.00&cu=INR" alt="UPI QR Code" style="width: 100px; height: 100px; display: block; margin: 0 auto;">
+            </div>
+            <a href="upi://pay?pa=damodartechcraze@okaxis&pn=DamodarTechCraze&am=999.00&cu=INR" class="btn-upi">⚡ Pay ₹999 via UPI App (1-Click)</a>
+        
         </div>
 
         <!-- Real-Time Webhook Simulation Trigger -->
         <button class="btn-deploy" onclick="simulateRealTimeWebhook()">I Have Paid - Deploy Live Now</button>
         
-        <a href="https://wa.me/?text=Hi,%20I%20have%20paid%20for%20activating%20the%20instant%20estimate%20widget%20for%20__BUSINESS_NAME__" target="_blank" class="whatsapp-help">💬 Need Help? Click to Chat with Developer on WhatsApp</a>
+        <a href="https://wa.me/?text=Hi,%20I%20have%20paid%20for%20activating%20the%20instant%20estimate%20widget%20for%20Mumbai Elite HVAC" target="_blank" class="whatsapp-help">💬 Need Help? Click to Chat with Developer on WhatsApp</a>
 
         <div id="terminal">
             [Webhook]: Payment Gateway Ping Received...<br>
             [Verify]: Amount matched successfully!<br>
-            [Deploy]: Injecting widget on __BUSINESS_NAME__...<br>
+            [Deploy]: Injecting widget on Mumbai Elite HVAC...<br>
             [SUCCESS]: Permanent Live Activation Confirmed!
         </div>
 
@@ -163,7 +138,7 @@ def generate_elite_nextlevel_checkout(business_name: str, niche: str, region: st
         <div class="modal-box" style="border: 2px solid #38bdf8;">
             <h3 style="color:#22c55e;">Wait! Don't Miss Out</h3>
             <p style="font-size: 13px; color: #cbd5e1;">Having trouble completing the setup investment? Let us assist you right away via WhatsApp.</p>
-            <a href="https://wa.me/?text=Hi,%20I%20need%20help%20with%20my%20__BUSINESS_NAME__%20widget%20setup" target="_blank" style="display:block; background:#22c55e; color:#fff; padding:12px; border-radius:6px; text-decoration:none; font-weight:bold; margin-top:15px;">💬 Chat with Founder Instantly</a>
+            <a href="https://wa.me/?text=Hi,%20I%20need%20help%20with%20my%20Mumbai Elite HVAC%20widget%20setup" target="_blank" style="display:block; background:#22c55e; color:#fff; padding:12px; border-radius:6px; text-decoration:none; font-weight:bold; margin-top:15px;">💬 Chat with Founder Instantly</a>
             <button onclick="closeExitIntent()" style="background:#334155; margin-top:8px;">No Thanks, I'll risk missing leads</button>
         </div>
     </div>
@@ -197,7 +172,7 @@ def generate_elite_nextlevel_checkout(business_name: str, niche: str, region: st
                     <div style="text-align:center; padding: 40px 0;">
                         <div style="font-size: 50px; color: #22c55e; margin-bottom: 15px;">🎉</div>
                         <h2 style="color: #22c55e; margin-bottom: 10px;">Payment Verified Successfully!</h2>
-                        <p style="color: #94a3b8; font-size: 13px; line-height: 1.5;">Your webhook signal was received and your custom widget has been permanently deployed live on <b>__BUSINESS_NAME__</b> domain.</p>
+                        <p style="color: #94a3b8; font-size: 13px; line-height: 1.5;">Your webhook signal was received and your custom widget has been permanently deployed live on <b>Mumbai Elite HVAC</b> domain.</p>
                         <a href="https://wa.me/?text=Hi,%20my%20payment%20is%20done.%20Let's%20verify." target="_blank" class="btn-upi" style="margin-top: 20px;">Open WhatsApp Confirmation</a>
                     </div>
                 `;
@@ -231,19 +206,4 @@ def generate_elite_nextlevel_checkout(business_name: str, niche: str, region: st
         }, 4000);
     </script>
 </body>
-</html>"""
-
-    html_content = template.replace("__BUSINESS_NAME__", business_name)
-    html_content = html_content.replace("__AMOUNT__", amount)
-    html_content = html_content.replace("__PAYMENT_BLOCK__", payment_block)
-
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write(html_content.strip())
-        
-    logger.info(f"Unstoppable 9/9 Advanced Checkout generated -> {filename}")
-    return filename
-
-if __name__ == "__main__":
-    generate_elite_nextlevel_checkout("Austin Prime Plumbers", "Plumber", "US")
-    generate_elite_nextlevel_checkout("Mumbai Elite HVAC", "HVAC", "IN")
-    logger.info("All unstoppable 9/9 advanced test pages compiled successfully.")
+</html>
