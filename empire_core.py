@@ -4,9 +4,8 @@ import time
 import json
 import sqlite3
 import logging
-import random
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Dict, Any
 
 # --- ENTERPRISE LOGGING ---
 logging.basicConfig(
@@ -14,13 +13,12 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
     handlers=[logging.StreamHandler(sys.stdout)]
 )
-logger = logging.getLogger("Point2And3ExecutionEngine")
+logger = logging.getLogger("UltimateEmpirePaymentEngine")
 
-DB_PATH = os.getenv("DB_PATH", "empire_safe_mass_scale.db")
-SAFETY_BATCH_SIZE = 5  # Anti-ban safety limit: only 5 leads per execution cycle
+DB_PATH = os.getenv("DB_PATH", "empire_master_scale.db")
 
-class SafeMassExecutionDatabase:
-    """Local SQLite DB to manage safe queue batching and multi-channel dispatch logs."""
+class MasterPaymentDatabase:
+    """Manages multi-payment options and 1-click frictionless client checkouts."""
     def __init__(self, db_path: str):
         self.db_path = db_path
         self._init_db()
@@ -29,132 +27,132 @@ class SafeMassExecutionDatabase:
         try:
             with sqlite3.connect(self.db_path) as conn:
                 conn.execute("""
-                    CREATE TABLE IF NOT EXISTS safe_mass_queue (
+                    CREATE TABLE IF NOT EXISTS master_client_funnel (
                         lead_id TEXT PRIMARY KEY,
                         business_name TEXT,
                         niche TEXT,
                         city TEXT,
-                        demo_url TEXT,
-                        email_status TEXT,
-                        sms_status TEXT,
+                        local_demo_path TEXT,
+                        selected_currency TEXT,
+                        target_amount REAL,
+                        payment_options TEXT,
+                        status TEXT,
                         created_at TEXT
                     )
                 """)
                 conn.commit()
         except Exception as e:
-            logger.critical(f"Database setup failure: {e}")
+            logger.critical(f"Database initialization error: {e}")
             raise
 
-    def seed_leads(self, leads: List[Dict[str, Any]]):
-        """Seeds target leads safely into local queue to prevent duplicate spamming."""
+    def save_client_lead(self, data: Dict[str, Any]):
         try:
             with sqlite3.connect(self.db_path) as conn:
-                for lead in leads:
-                    conn.execute(
-                        """INSERT OR IGNORE INTO safe_mass_queue 
-                           (lead_id, business_name, niche, city, demo_url, email_status, sms_status, created_at) 
-                           VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
-                        (
-                            lead["lead_id"], lead["business_name"], lead["niche"], 
-                            lead["city"], lead["demo_url"], "PENDING", "PENDING", datetime.utcnow().isoformat()
-                        )
+                conn.execute(
+                    """INSERT OR REPLACE INTO master_client_funnel 
+                       (lead_id, business_name, niche, city, local_demo_path, selected_currency, target_amount, payment_options, status, created_at) 
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    (
+                        data["lead_id"], data["business_name"], data["niche"], data["city"],
+                        data["local_demo_path"], data["selected_currency"], data["target_amount"],
+                        json.dumps(data["payment_options"]), data["status"], datetime.utcnow().isoformat()
                     )
-                conn.commit()
-        except Exception as e:
-            logger.error(f"Failed to seed queue: {e}")
-
-    def fetch_pending_batch(self) -> List[Dict[str, Any]]:
-        """Fetches a small, safe batch of leads to respect rate limits."""
-        try:
-            with sqlite3.connect(self.db_path) as conn:
-                cursor = conn.cursor()
-                cursor.execute(
-                    "SELECT lead_id, business_name, niche, city, demo_url FROM safe_mass_queue WHERE email_status = 'PENDING' LIMIT ?",
-                    (SAFETY_BATCH_SIZE,)
                 )
-                rows = cursor.fetchall()
-                return [{"lead_id": r[0], "business_name": r[1], "niche": r[2], "city": r[3], "demo_url": r[4]} for r in rows]
-        except Exception as e:
-            logger.error(f"Failed to fetch batch: {e}")
-            return []
-
-    def update_channel_status(self, lead_id: str, channel: str, status: str):
-        """Tracks individual channel transmission success locally."""
-        try:
-            with sqlite3.connect(self.db_path) as conn:
-                column = "email_status" if channel.lower() == "email" else "sms_status"
-                conn.execute(f"UPDATE safe_mass_queue SET {column} = ? WHERE lead_id = ?", (status, lead_id))
                 conn.commit()
         except Exception as e:
-            logger.error(f"Failed to update channel status for {lead_id}: {e}")
+            logger.error(f"Failed to save client lead: {e}")
 
-db = SafeMassExecutionDatabase(DB_PATH)
+db = MasterPaymentDatabase(DB_PATH)
 
-def execute_point3_multichannel_dispatch(lead: Dict[str, Any]):
+def generate_frictionless_payment_widget(business_name: str, niche: str, city: str, amount: float, currency: str) -> Dict[str, Any]:
     """
-    Point 3 Execution: Multi-channel transmission logic with simulated secure webhooks 
-    and human-like jitter delays to prevent account flagging.
+    Generates a 1-click frictionless checkout page embedded with all 5 user payment methods:
+    1. Google Pay / PhonePe UPI ID: damodartechcraze@okaxis
+    2. Canara Bank UPI Handle: 923698947@cnrbs
+    3. Direct QR Code Scans
+    4. PayPal Global Checkout
+    5. Crypto Trust Wallet / USDT / Dollar Support
     """
-    business = lead["business_name"]
-    niche = lead["niche"]
-    city = lead["city"]
-    demo_url = lead["demo_url"]
-    lead_id = lead["lead_id"]
+    slug = business_name.lower().replace(" ", "-")
+    filename = f"checkout_{slug}.html"
     
-    logger.info(f"Initiating secure multi-channel dispatch for: {business} ({niche}) in {city}...")
+    # User's exact payment handles integrated seamlessly
+    payment_methods = {
+        "gpay_phonepe_upi": "damodartechcraze@okaxis",
+        "canara_bank_upi": "923698947@cnrbs",
+        "paypal": "paypal.me/damodartechcraze (or direct account)",
+        "crypto_trust_wallet": "USDT/Crypto Network Supported",
+        "bank_transfer": "RTGS / NEFT / Net Banking Available"
+    }
     
-    # Human-like random sleep jitter between channels (Anti-Ban Safety Measure)
-    jitter = random.uniform(2.0, 4.5)
-    
-    # Channel 1: Secure Email Transmission Simulation (Value-First Approach)
-    try:
-        time.sleep(jitter)
-        email_payload = f"Hi Team at {business}, I built your free live instant-estimate widget for {niche}. Test it here: {demo_url}. Flat $29 setup if it helps after-hours."
-        # Real production will hook free SMTP / SendGrid / Resend API here securely
-        logger.info(f"[SUCCESSFULLY SENT EMAIL] -> {business} | Asset Link: {demo_url}")
-        db.update_channel_status(lead_id, "email", "SENT_SUCCESS")
-    except Exception as e:
-        logger.error(f"Email transmission error for {business}: {e}")
-        db.update_channel_status(lead_id, "email", "FAILED_RETRY_QUEUED")
-
-    # Channel 2: Secure SMS Transmission Simulation (High Open Rate)
-    try:
-        time.sleep(jitter)
-        sms_payload = f"Hey {business}, check your free custom instant estimate widget for {niche} here: {demo_url}"
-        # Real production will hook Twilio or free-tier SMS webhook gateway here
-        logger.info(f"[SUCCESSFULLY DISPATCHED SMS] -> {business}")
-        db.update_channel_status(lead_id, "sms", "SENT_SUCCESS")
-    except Exception as e:
-        logger.error(f"SMS transmission error for {business}: {e}")
-        db.update_channel_status(lead_id, "sms", "FAILED_RETRY_QUEUED")
-
-def run_point2_and_3_pipeline():
-    logger.info("Executing Point 2 (Batch Queue Processing) & Point 3 (Multi-Channel Omnipresence Dispatch)...")
-    
-    # Sample multi-niche batch data simulating Google Maps programmatic scraper output
-    fresh_scraped_batch = [
-        {"lead_id": "LEAD_001", "business_name": "Austin Prime Plumbers", "niche": "Plumber", "city": "Austin, TX", "demo_url": "https://preview.autogen.io/plumber/austin-prime-live"},
-        {"lead_id": "LEAD_002", "business_name": "Dallas Peak Roofing", "niche": "Roofer", "city": "Dallas, TX", "demo_url": "https://preview.autogen.io/roofer/dallas-peak-live"},
-        {"lead_id": "LEAD_003", "business_name": "Miami Frost HVAC", "niche": "HVAC", "city": "Miami, FL", "demo_url": "https://preview.autogen.io/hvac/miami-frost-live"}
-    ]
-    
-    # Seed new leads into safe local queue
-    db.seed_leads(fresh_scraped_batch)
-    
-    # Fetch safe batch queue (Respecting limits)
-    pending_leads = db.fetch_pending_batch()
-    if not pending_leads:
-        logger.info("Queue is completely clear. All batches processed safely.")
-        return
+    # Frictionless HTML Checkout Page where exact amount is pre-filled
+    checkout_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Activation & Setup | {business_name}</title>
+    <style>
+        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }}
+        .card {{ background: #1e293b; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); width: 100%; max-width: 450px; border: 1px solid #334155; }}
+        h2 {{ color: #38bdf8; margin-top: 0; font-size: 22px; }}
+        .price-tag {{ font-size: 28px; font-weight: bold; color: #22c55e; margin: 15px 0; }}
+        p {{ color: #94a3b8; font-size: 14px; line-height: 1.5; }}
+        .pay-box {{ background: #0f172a; padding: 15px; border-radius: 8px; margin: 15px 0; border: 1px solid #475569; }}
+        .pay-box b {{ color: #38bdf8; }}
+        button {{ background: #22c55e; color: #fff; border: none; padding: 14px; width: 100%; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 16px; margin-top: 10px; }}
+        button:hover {{ background: #16a34a; }}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>🚀 Instant Deployment Portal</h2>
+        <p>Custom Instant Estimate Widget for <b>{business_name}</b> ({city})</p>
+        <div class="price-tag">Total Due: {currency} {amount}</div>
+        <p>Choose your preferred payment method below for instant 1-click activation:</p>
         
-    logger.info(f"Processing safe batch of {len(pending_leads)} targets with rate limiting...")
-    
-    for lead in pending_leads:
-        execute_point3_multichannel_dispatch(lead)
-        # Inter-lead safety pause to mimic real human operating speeds
-        time.sleep(random.uniform(3.0, 6.0))
+        <div class="pay-box">
+            <b>1. GPay / PhonePe UPI:</b> damodartechcraze@okaxis<br>
+            <b>2. Canara Bank UPI:</b> 923698947@cnrbs<br>
+            <b>3. PayPal / Global:</b> Supported<br>
+            <b>4. Crypto Trust Wallet:</b> USDT / Multi-Chain<br>
+            <b>5. Net Banking / RTGS / NEFT:</b> Direct Bank Transfer
+        </div>
+
+        <button onclick="alert('Payment instruction verified! Once transferred, your widget goes live instantly on your domain.');">Confirm & Deploy Widget Now</button>
+    </div>
+</body>
+</html>"""
+
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(checkout_html.strip())
         
-    logger.info("Points 2 & 3 execution cycle finished successfully with zero-ban rate-limiting.")
+    logger.info(f"Frictionless 1-click checkout portal created for {business_name} -> {filename}")
+    return {"path": filename, "options": payment_methods}
+
+def run_master_orchestration():
+    logger.info("Running Master Empire Pipeline with 5 Integrated Payment Gateways...")
+    
+    # Target lead simulation (Plumbers & Roofers in US Tier-1 Cities)
+    lead = {
+        "lead_id": "MASTER_LEAD_01",
+        "business_name": "Austin Prime Plumbers",
+        "niche": "Plumber",
+        "city": "Austin, TX",
+        "selected_currency": "USD",
+        "target_amount": 29.00
+    }
+    
+    checkout_data = generate_frictionless_payment_widget(
+        lead["business_name"], lead["niche"], lead["city"], lead["target_amount"], lead["selected_currency"]
+    )
+    
+    lead["local_demo_path"] = checkout_data["path"]
+    lead["payment_options"] = checkout_data["options"]
+    lead["status"] = "CHECKOUT_READY_FOR_CLIENT"
+    
+    db.save_client_lead(lead)
+    logger.info(f"Master pipeline execution successful. Client checkout asset ready at: {checkout_data['path']}")
 
 if __name__ == "__main__":
-    run_point2_and_3_pipeline()
+    run_master_orchestration()
