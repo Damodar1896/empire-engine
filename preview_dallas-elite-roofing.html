@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Quote Widget | Dallas Elite Roofing</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: #1e293b; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); width: 100%; max-width: 400px; border: 1px solid #334155; }
+        h2 { color: #38bdf8; margin-top: 0; font-size: 22px; }
+        p { color: #94a3b8; font-size: 14px; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #475569; color: #fff; border-radius: 6px; box-sizing: border-box; }
+        button { background: #22c55e; color: #fff; border: none; padding: 12px; width: 100%; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        button:hover { background: #16a34a; }
+        .badge { background: rgba(56, 189, 248, 0.1); color: #38bdf8; padding: 4px 8px; border-radius: 4px; font-size: 11px; display: inline-block; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="badge">LIVE AUTOMATED PREVIEW FOR DALLAS, TX</div>
+        <h2>Dallas Elite Roofing</h2>
+        <p>After-Hours Instant Estimate & PDF Receipt Utility (Active Demo)</p>
+        <form onsubmit="event.preventDefault(); alert('Demo Successful! This instant PDF quote widget can be embedded on your site today for $29.');">
+            <label>Service Required (Roofer):</label>
+            <input type="text" value="Emergency Roofer Service Request" readonly>
+            <label>Your Phone Number:</label>
+            <input type="text" placeholder="(555) 000-0000">
+            <button type="submit">Generate Instant PDF Quote</button>
+        </form>
+    </div>
+</body>
+</html>
