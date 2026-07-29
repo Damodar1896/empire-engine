@@ -1,0 +1,28 @@
+name: Damodar Empire Free Cloud Autonomous Engine
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # Runs every 30 minutes automatically 24x7
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  run-empire-engine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Autonomous Free Proxy Harvesting
+        run: |
+          python3 master_free_proxy_empire.py
+
+      - name: Commit and Push Updated Master Wallet & Logs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Damodar Empire: Autonomous Cloud Sync & 50-Tool Keys Harvested"
+          file_pattern: "*.json *.txt *.log"
