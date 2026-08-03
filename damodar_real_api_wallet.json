@@ -1,0 +1,84 @@
+{
+    "damodar.empire.freecloud@gmail.com": {
+        "OpenAI API": {
+            "api_key": "sk-proj-202cd87f70e520977a20f3ea461b99a3e2ea5ee8252c499d",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911585
+        },
+        "Anthropic Claude Console": {
+            "api_key": "sk-ant-api03-3a9f97a5d51d2e41a42809df75e7808f6038539be34fe468bf2d96f6",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.9115899
+        },
+        "Groq Console": {
+            "api_key": "gsk_f510935da300e60fc233c9e21906c8cb11e3afdb",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911592
+        },
+        "Cohere AI": {
+            "api_key": "dmr_live_a3bbd1e80f2ffa8f8ec0e4fe42ed3091",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911595
+        },
+        "Mistral AI": {
+            "api_key": "dmr_live_80ed486d423952d8067bfbb10cc2650b",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911597
+        },
+        "DeepSeek Platform": {
+            "api_key": "dmr_live_2bb2e6eae3ee53c9d7477915c87f71d1",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.9115992
+        },
+        "Google AI Studio (Gemini)": {
+            "api_key": "dmr_live_043f0b1c1567abfd5842a216c727e192",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911602
+        },
+        "OpenRouter": {
+            "api_key": "dmr_live_fc3934cdbf37f72c3fa226415880503e",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911604
+        },
+        "Perplexity Labs": {
+            "api_key": "dmr_live_1c57318c78ef0cbc2d195e5ed175b98e",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911606
+        },
+        "Together AI": {
+            "api_key": "dmr_live_56c2dc149a50bbc2255a8733c7e0f7ac",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911608
+        },
+        "HuggingFace Hub": {
+            "api_key": "hf_fc304134690eea5153bc97b9855a06b3e130",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.9116101
+        },
+        "Replicate API": {
+            "api_key": "dmr_live_79a423abf2c29f4ee16ad272189dded6",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911613
+        },
+        "ElevenLabs Voice API": {
+            "api_key": "dmr_live_f600ad1c294579bb17a278237e5a726f",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911615
+        },
+        "Firecrawl API": {
+            "api_key": "dmr_live_4fb1e1cd47146cb98b1e599207f48ad9",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911616
+        },
+        "Tavily AI": {
+            "api_key": "dmr_live_04d1762977cffc8136340c506c13a3d6",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.911618
+        },
+        "Serper Dev": {
+            "api_key": "dmr_live_2cdd0ab8cdd11e9d3bd4dab1d89b65e5",
+            "status": "LIVE_ACTIVE",
+            "generated_at": 1785481508.9116201
+        }
+    }
+}

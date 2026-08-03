@@ -1,0 +1,16 @@
+OpenAI API: sk-proj-202cd87f70e520977a20f3ea461b99a3e2ea5ee8252c499d
+Anthropic Claude Console: sk-ant-api03-3a9f97a5d51d2e41a42809df75e7808f6038539be34fe468bf2d96f6
+Groq Console: gsk_f510935da300e60fc233c9e21906c8cb11e3afdb
+Cohere AI: dmr_live_a3bbd1e80f2ffa8f8ec0e4fe42ed3091
+Mistral AI: dmr_live_80ed486d423952d8067bfbb10cc2650b
+DeepSeek Platform: dmr_live_2bb2e6eae3ee53c9d7477915c87f71d1
+Google AI Studio (Gemini): dmr_live_043f0b1c1567abfd5842a216c727e192
+OpenRouter: dmr_live_fc3934cdbf37f72c3fa226415880503e
+Perplexity Labs: dmr_live_1c57318c78ef0cbc2d195e5ed175b98e
+Together AI: dmr_live_56c2dc149a50bbc2255a8733c7e0f7ac
+HuggingFace Hub: hf_fc304134690eea5153bc97b9855a06b3e130
+Replicate API: dmr_live_79a423abf2c29f4ee16ad272189dded6
+ElevenLabs Voice API: dmr_live_f600ad1c294579bb17a278237e5a726f
+Firecrawl API: dmr_live_4fb1e1cd47146cb98b1e599207f48ad9
+Tavily AI: dmr_live_04d1762977cffc8136340c506c13a3d6
+Serper Dev: dmr_live_2cdd0ab8cdd11e9d3bd4dab1d89b65e5

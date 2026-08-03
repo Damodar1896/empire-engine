@@ -1,0 +1,304 @@
+{
+    "damodar.empire.freecloud@gmail.com": {
+        "OpenAI API": {
+            "api_key": "sk-damodar-freecloud-50x-openaiapi-93037433",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "43.129.249.83:8888",
+            "timestamp": 1785338213.66843
+        },
+        "Anthropic Claude Console": {
+            "api_key": "sk-damodar-freecloud-50x-anthropicclaudeconsole-16240317",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "154.6.127.238:5709",
+            "timestamp": 1785338217.8537412
+        },
+        "Groq Console": {
+            "api_key": "sk-damodar-freecloud-50x-groqconsole-11177175",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "162.240.76.92:80",
+            "timestamp": 1785338223.477891
+        },
+        "Cohere AI": {
+            "api_key": "sk-damodar-freecloud-50x-cohereai-64875158",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "78.189.32.215:8080",
+            "timestamp": 1785338230.341065
+        },
+        "Mistral AI": {
+            "api_key": "sk-damodar-freecloud-50x-mistralai-77209232",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "166.88.155.8:6167",
+            "timestamp": 1785338237.0616782
+        },
+        "DeepSeek Platform": {
+            "api_key": "sk-damodar-freecloud-50x-deepseekplatform-14438906",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "166.88.155.8:6167",
+            "timestamp": 1785338240.85821
+        },
+        "Google AI Studio (Gemini)": {
+            "api_key": "sk-damodar-freecloud-50x-googleaistudiogemini-88673154",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "178.251.111.21:8080",
+            "timestamp": 1785338244.698675
+        },
+        "OpenRouter": {
+            "api_key": "sk-damodar-freecloud-50x-openrouter-28896268",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "5.250.181.197:3128",
+            "timestamp": 1785338250.68475
+        },
+        "Perplexity Labs": {
+            "api_key": "sk-damodar-freecloud-50x-perplexitylabs-65307499",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "183.248.129.5:17981",
+            "timestamp": 1785338256.8787572
+        },
+        "Together AI": {
+            "api_key": "sk-damodar-freecloud-50x-togetherai-71146805",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "138.197.68.35:4857",
+            "timestamp": 1785338260.9468758
+        },
+        "HuggingFace Hub": {
+            "api_key": "sk-damodar-freecloud-50x-huggingfacehub-84717733",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "103.56.206.67:4000",
+            "timestamp": 1785338266.096971
+        },
+        "Anyscale Endpoints": {
+            "api_key": "sk-damodar-freecloud-50x-anyscaleendpoints-90677466",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "38.41.4.60:999",
+            "timestamp": 1785338272.043935
+        },
+        "Replicate API": {
+            "api_key": "sk-damodar-freecloud-50x-replicateapi-61100660",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "138.197.68.35:4857",
+            "timestamp": 1785338278.372515
+        },
+        "Fireworks AI": {
+            "api_key": "sk-damodar-freecloud-50x-fireworksai-59067541",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "174.140.200.92:6372",
+            "timestamp": 1785338284.842349
+        },
+        "Novita AI": {
+            "api_key": "sk-damodar-freecloud-50x-novitaai-62116547",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "95.217.104.21:17942",
+            "timestamp": 1785338288.062613
+        },
+        "DeepInfra": {
+            "api_key": "sk-damodar-freecloud-50x-deepinfra-64037896",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "165.140.185.49:39593",
+            "timestamp": 1785338292.169291
+        },
+        "SiliconFlow": {
+            "api_key": "sk-damodar-freecloud-50x-siliconflow-35818639",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "78.189.32.215:8080",
+            "timestamp": 1785338298.924691
+        },
+        "Baseten": {
+            "api_key": "sk-damodar-freecloud-50x-baseten-61795051",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "45.43.63.37:10808",
+            "timestamp": 1785338302.086049
+        },
+        "XAI Grok Console": {
+            "api_key": "sk-damodar-freecloud-50x-xaigrokconsole-47670451",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "177.52.25.34:1080",
+            "timestamp": 1785338306.355341
+        },
+        "Jina AI": {
+            "api_key": "sk-damodar-freecloud-50x-jinaai-21619695",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "166.88.155.8:6167",
+            "timestamp": 1785338310.901271
+        },
+        "Voyage AI": {
+            "api_key": "sk-damodar-freecloud-50x-voyageai-96359898",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "119.148.23.210:9990",
+            "timestamp": 1785338315.142464
+        },
+        "Phind API": {
+            "api_key": "sk-damodar-freecloud-50x-phindapi-54798955",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "173.197.98.164:8111",
+            "timestamp": 1785338322.080945
+        },
+        "Blackbox AI": {
+            "api_key": "sk-damodar-freecloud-50x-blackboxai-33848802",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "206.123.156.219:9552",
+            "timestamp": 1785338326.3995972
+        },
+        "Codeium API": {
+            "api_key": "sk-damodar-freecloud-50x-codeiumapi-71907696",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "210.48.237.116:8080",
+            "timestamp": 1785338332.074974
+        },
+        "Tabnine API": {
+            "api_key": "sk-damodar-freecloud-50x-tabnineapi-26954172",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "159.100.20.206:27866",
+            "timestamp": 1785338336.186213
+        },
+        "SambaNova Cloud": {
+            "api_key": "sk-damodar-freecloud-50x-sambanovacloud-89062302",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "166.88.155.8:6167",
+            "timestamp": 1785338341.168698
+        },
+        "Cerebras Inference": {
+            "api_key": "sk-damodar-freecloud-50x-cerebrasinference-77205498",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "69.48.201.94:80",
+            "timestamp": 1785338345.480581
+        },
+        "Together Computer": {
+            "api_key": "sk-damodar-freecloud-50x-togethercomputer-57773351",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "103.56.206.67:4000",
+            "timestamp": 1785338350.3719912
+        },
+        "Lepton AI": {
+            "api_key": "sk-damodar-freecloud-50x-leptonai-99509251",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "166.88.155.8:6167",
+            "timestamp": 1785338353.786335
+        },
+        "Modal Labs": {
+            "api_key": "sk-damodar-freecloud-50x-modallabs-67465196",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "183.248.129.5:17981",
+            "timestamp": 1785338357.734974
+        },
+        "Banana Dev": {
+            "api_key": "sk-damodar-freecloud-50x-bananadev-55060543",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "177.52.25.34:1080",
+            "timestamp": 1785338361.7366788
+        },
+        "RunPod Serverless": {
+            "api_key": "sk-damodar-freecloud-50x-runpodserverless-14681359",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "95.217.104.21:17942",
+            "timestamp": 1785338366.108775
+        },
+        "Vast AI Endpoints": {
+            "api_key": "sk-damodar-freecloud-50x-vastaiendpoints-65410472",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "103.56.206.67:4000",
+            "timestamp": 1785338369.875392
+        },
+        "Lamini AI": {
+            "api_key": "sk-damodar-freecloud-50x-laminiai-31641654",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "45.43.63.37:10808",
+            "timestamp": 1785338374.842016
+        },
+        "Writer API": {
+            "api_key": "sk-damodar-freecloud-50x-writerapi-52249139",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "177.52.25.34:1080",
+            "timestamp": 1785338379.215882
+        },
+        "AI21 Labs Studio": {
+            "api_key": "sk-damodar-freecloud-50x-ai21labsstudio-55164822",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "78.189.32.215:8080",
+            "timestamp": 1785338385.354995
+        },
+        "Cohere Embed": {
+            "api_key": "sk-damodar-freecloud-50x-cohereembed-93583763",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "185.105.184.45:1110",
+            "timestamp": 1785338388.575884
+        },
+        "JigsawStack": {
+            "api_key": "sk-damodar-freecloud-50x-jigsawstack-71301300",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "166.88.155.8:6167",
+            "timestamp": 1785338395.213665
+        },
+        "Exa AI": {
+            "api_key": "sk-damodar-freecloud-50x-exaai-84607193",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "183.248.129.5:17981",
+            "timestamp": 1785338401.589288
+        },
+        "Tavily AI": {
+            "api_key": "sk-damodar-freecloud-50x-tavilyai-15205637",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "103.133.61.239:8080",
+            "timestamp": 1785338404.8754828
+        },
+        "Serper Dev": {
+            "api_key": "sk-damodar-freecloud-50x-serperdev-68664236",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "173.197.98.164:8111",
+            "timestamp": 1785338411.363783
+        },
+        "Apify API": {
+            "api_key": "sk-damodar-freecloud-50x-apifyapi-89780858",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "94.21.216.125:9999",
+            "timestamp": 1785338415.65749
+        },
+        "ScrapingBee": {
+            "api_key": "sk-damodar-freecloud-50x-scrapingbee-33458166",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "119.148.23.210:9990",
+            "timestamp": 1785338419.698164
+        },
+        "Firecrawl API": {
+            "api_key": "sk-damodar-freecloud-50x-firecrawlapi-65904422",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "5.78.86.6:8080",
+            "timestamp": 1785338425.270765
+        },
+        "Diffbot Knowledge Graph": {
+            "api_key": "sk-damodar-freecloud-50x-diffbotknowledgegraph-50743222",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "210.48.237.116:8080",
+            "timestamp": 1785338432.196109
+        },
+        "DeepL API": {
+            "api_key": "sk-damodar-freecloud-50x-deeplapi-98901890",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "43.129.249.83:8888",
+            "timestamp": 1785338437.3733811
+        },
+        "ElevenLabs Voice API": {
+            "api_key": "sk-damodar-freecloud-50x-elevenlabsvoiceapi-58851704",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "190.97.228.65:999",
+            "timestamp": 1785338440.602047
+        },
+        "Play.ht API": {
+            "api_key": "sk-damodar-freecloud-50x-play.htapi-62197971",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "114.94.148.37:18080",
+            "timestamp": 1785338444.659462
+        },
+        "Cartesia AI": {
+            "api_key": "sk-damodar-freecloud-50x-cartesiaai-49830423",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "144.24.47.42:1080",
+            "timestamp": 1785338448.5011
+        },
+        "Deepgram Speech-to-Text": {
+            "api_key": "sk-damodar-freecloud-50x-deepgramspeech-to-text-61045785",
+            "status": "FREE_PROXY_VERIFIED",
+            "proxy_used": "103.133.61.239:8080",
+            "timestamp": 1785338451.724822
+        }
+    }
+}
