@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damodar Tech Craze | 100+ Ultra-Luxury Enterprise Portals</title>
+    <style>
+        :root {
+            --bg-deep: #02040a;
+            --bg-card: rgba(10, 15, 30, 0.75);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(59, 130, 246, 0.4);
+            --accent-blue: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        
+        * { box-sizing: border-box; }
+        body {
+            background-color: var(--bg-deep); color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0; padding: 0; overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(29, 78, 216, 0.22) 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(147, 51, 234, 0.15) 0%, transparent 45%);
+        }
+        
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 24px 60px; border-bottom: 1px solid var(--border-glass);
+            background: rgba(2, 4, 10, 0.85); backdrop-filter: blur(20px);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        
+        .logo { font-size: 1.6rem; font-weight: 900; letter-spacing: -0.5px; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo span { color: var(--accent-blue); text-shadow: 0 0 25px rgba(59, 130, 246, 0.6); }
+        
+        .nav-social { display: flex; gap: 15px; align-items: center; }
+        .social-btn {
+            background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa; padding: 8px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 600;
+            text-decoration: none; transition: all 0.2s ease;
+        }
+        .social-btn:hover { background: var(--accent-blue); color: #fff; box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); }
+        
+        .hero { text-align: center; padding: 100px 20px 40px 20px; max-width: 950px; margin: 0 auto; }
+        .hero h1 {
+            font-size: 4.2rem; font-weight: 900; margin-bottom: 20px; letter-spacing: -1.5px;
+            background: linear-gradient(135deg, #ffffff 20%, #cbd5e1 70%, #60a5fa 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .hero p { color: var(--text-muted); font-size: 1.25rem; line-height: 1.6; margin-bottom: 45px; }
+        
+        .search-container { max-width: 700px; margin: 0 auto 35px auto; position: relative; }
+        .search-box {
+            width: 100%; padding: 20px 30px; background: rgba(10, 15, 30, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; color: #fff; font-size: 1.1rem; outline: none;
+            backdrop-filter: blur(15px); transition: all 0.3s ease; box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8);
+        }
+        .search-box:focus { border-color: var(--accent-blue); box-shadow: 0 0 0 4px var(--accent-glow); }
+        .kbd-shortcut {
+            position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+            padding: 4px 8px; border-radius: 6px; font-size: 0.75rem; color: #94a3b8; font-family: monospace;
+        }
+        
+        .grid-container {
+            max-width: 1350px; margin: 0 auto; display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(390px, 1fr)); gap: 30px; padding: 0 30px 80px 30px;
+        }
+        
+        .card {
+            background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 22px; padding: 38px;
+            backdrop-filter: blur(16px); transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; justify-content: space-between;
+            position: relative; overflow: hidden; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+        .card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent); opacity: 0; transition: opacity 0.3s ease;
+        }
+        .card:hover { transform: translateY(-8px); border-color: var(--border-glow); box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(59, 130, 246, 0.25); }
+        .card:hover::before { opacity: 1; }
+        
+        .card h3 { font-size: 1.6rem; font-weight: 700; margin: 0 0 12px 0; color: #fff; }
+        .card p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; margin-bottom: 35px; }
+        
+        .card-footer { display: flex; justify-content: flex-end; align-items: center; border-top: 1px solid var(--border-glass); padding-top: 22px; }
+        .btn-explore {
+            display: inline-flex; align-items: center; gap: 8px; background: rgba(59, 130, 246, 0.12); color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.35); padding: 12px 26px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: all 0.25s ease;
+        }
+        .btn-explore:hover { background: var(--accent-blue); color: #fff; box-shadow: 0 0 25px rgba(59, 130, 246, 0.7); transform: scale(1.02); }
+        
+        /* Restored 5-Star Testimonials Section */
+        .testimonials-section { max-width: 1350px; margin: 0 auto 100px auto; padding: 0 30px; }
+        .section-title {
+            text-align: center; font-size: 2.2rem; font-weight: 800; margin-bottom: 40px;
+            background: linear-gradient(135deg, #fff 30%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        .testimonial-card { background: var(--bg-card); border: 1px solid var(--border-glass); padding: 30px; border-radius: 20px; backdrop-filter: blur(12px); }
+        .stars { color: #fbbf24; font-size: 1.1rem; margin-bottom: 12px; }
+        .testimonial-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .author { font-weight: 700; color: #fff; font-size: 0.95rem; }
+        .role { font-size: 0.8rem; color: #64748b; }
+        
+        .ai-concierge {
+            position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white; padding: 16px 26px; border-radius: 30px; font-weight: bold; box-shadow: 0 15px 35px rgba(59, 130, 246, 0.5);
+            cursor: pointer; z-index: 9999; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.25);
+            transition: transform 0.2s ease;
+        }
+        .ai-concierge:hover { transform: scale(1.05); }
+        
+        footer { text-align: center; padding: 60px; color: #64748b; font-size: 0.88rem; border-top: 1px solid var(--border-glass); background: rgba(2, 4, 10, 0.95); }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">Damodar Tech <span>Craze.</span></a>
+        <div class="nav-social">
+            <a href="https://t.me/damodartechcraze" target="_blank" class="social-btn">💬 Telegram Hub</a>
+            <a href="https://chat.whatsapp.com/FOhff0IDlQzKT3OJZV24BB?s=sh&p=a&mlu=0&ilr=0" target="_blank" class="social-btn" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">🟢 WhatsApp Community</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Intelligence. Precision. Scale.</h1>
+        <p>Access all 100+ verified enterprise affiliate networks, AI infrastructure nodes, and high-performance monetization portals curated for elite execution.</p>
+        
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search across all 100+ active portals..." id="searchInput">
+            <span class="kbd-shortcut">Cmd + K</span>
+        </div>
+    </div>
+
+    <div class="grid-container" id="cardGrid">
+        
+        <div class="card" data-name="clickbank global marketplace - node #001">
+            <div>
+                <h3>ClickBank Global Marketplace - Node #001</h3>
+                <p>Verified enterprise execution node #001 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.clickbank.com?aff=damodar_empire&node=1" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="digistore24 top offers - node #002">
+            <div>
+                <h3>DigiStore24 Top Offers - Node #002</h3>
+                <p>Verified enterprise execution node #002 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.digistore24.com?aff=damodar_empire&node=2" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="jvzoo digital network - node #003">
+            <div>
+                <h3>JVZoo Digital Network - Node #003</h3>
+                <p>Verified enterprise execution node #003 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.jvzoo.com?aff=damodar_empire&node=3" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="warriorplus marketplace - node #004">
+            <div>
+                <h3>WarriorPlus Marketplace - Node #004</h3>
+                <p>Verified enterprise execution node #004 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com?aff=damodar_empire&node=4" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="shareasale merchant hub - node #005">
+            <div>
+                <h3>ShareASale Merchant Hub - Node #005</h3>
+                <p>Verified enterprise execution node #005 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.shareasale.com?aff=damodar_empire&node=5" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="cj affiliate partners - node #006">
+            <div>
+                <h3>CJ Affiliate Partners - Node #006</h3>
+                <p>Verified enterprise execution node #006 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.cj.com?aff=damodar_empire&node=6" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="rakuten advertising - node #007">
+            <div>
+                <h3>Rakuten Advertising - Node #007</h3>
+                <p>Verified enterprise execution node #007 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://rakutenadvertising.com?aff=damodar_empire&node=7" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="awin global network - node #008">
+            <div>
+                <h3>Awin Global Network - Node #008</h3>
+                <p>Verified enterprise execution node #008 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.awin.com?aff=damodar_empire&node=8" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="partnerstack saas hub - node #009">
+            <div>
+                <h3>PartnerStack SaaS Hub - Node #009</h3>
+                <p>Verified enterprise execution node #009 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://partnerstack.com?aff=damodar_empire&node=9" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="impact.com automation - node #010">
+            <div>
+                <h3>Impact.com Automation - Node #010</h3>
+                <p>Verified enterprise execution node #010 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://impact.com?aff=damodar_empire&node=10" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="maxbounty cpa platform - node #011">
+            <div>
+                <h3>MaxBounty CPA Platform - Node #011</h3>
+                <p>Verified enterprise execution node #011 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.maxbounty.com?aff=damodar_empire&node=11" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="amazon associates - node #012">
+            <div>
+                <h3>Amazon Associates - Node #012</h3>
+                <p>Verified enterprise execution node #012 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://affiliate-program.amazon.com?aff=damodar_empire&node=12" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="openai gpt-4o portal - node #013">
+            <div>
+                <h3>OpenAI GPT-4o Portal - Node #013</h3>
+                <p>Verified enterprise execution node #013 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.openai.com?aff=damodar_empire&node=13" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="anthropic claude console - node #014">
+            <div>
+                <h3>Anthropic Claude Console - Node #014</h3>
+                <p>Verified enterprise execution node #014 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.anthropic.com?aff=damodar_empire&node=14" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="groq lpu engine - node #015">
+            <div>
+                <h3>Groq LPU Engine - Node #015</h3>
+                <p>Verified enterprise execution node #015 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.groq.com?aff=damodar_empire&node=15" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="deepseek platform - node #016">
+            <div>
+                <h3>DeepSeek Platform - Node #016</h3>
+                <p>Verified enterprise execution node #016 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.deepseek.com?aff=damodar_empire&node=16" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="google ai studio - node #017">
+            <div>
+                <h3>Google AI Studio - Node #017</h3>
+                <p>Verified enterprise execution node #017 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://aistudio.google.com?aff=damodar_empire&node=17" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="hugging face hub - node #018">
+            <div>
+                <h3>Hugging Face Hub - Node #018</h3>
+                <p>Verified enterprise execution node #018 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://huggingface.co?aff=damodar_empire&node=18" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="elevenlabs voice ai - node #019">
+            <div>
+                <h3>ElevenLabs Voice AI - Node #019</h3>
+                <p>Verified enterprise execution node #019 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://elevenlabs.io?aff=damodar_empire&node=19" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="perplexity labs api - node #020">
+            <div>
+                <h3>Perplexity Labs API - Node #020</h3>
+                <p>Verified enterprise execution node #020 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.perplexity.ai?aff=damodar_empire&node=20" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="clickbank global marketplace - node #021">
+            <div>
+                <h3>ClickBank Global Marketplace - Node #021</h3>
+                <p>Verified enterprise execution node #021 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.clickbank.com?aff=damodar_empire&node=21" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="digistore24 top offers - node #022">
+            <div>
+                <h3>DigiStore24 Top Offers - Node #022</h3>
+                <p>Verified enterprise execution node #022 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.digistore24.com?aff=damodar_empire&node=22" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="jvzoo digital network - node #023">
+            <div>
+                <h3>JVZoo Digital Network - Node #023</h3>
+                <p>Verified enterprise execution node #023 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.jvzoo.com?aff=damodar_empire&node=23" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="warriorplus marketplace - node #024">
+            <div>
+                <h3>WarriorPlus Marketplace - Node #024</h3>
+                <p>Verified enterprise execution node #024 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com?aff=damodar_empire&node=24" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="shareasale merchant hub - node #025">
+            <div>
+                <h3>ShareASale Merchant Hub - Node #025</h3>
+                <p>Verified enterprise execution node #025 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.shareasale.com?aff=damodar_empire&node=25" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="cj affiliate partners - node #026">
+            <div>
+                <h3>CJ Affiliate Partners - Node #026</h3>
+                <p>Verified enterprise execution node #026 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.cj.com?aff=damodar_empire&node=26" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="rakuten advertising - node #027">
+            <div>
+                <h3>Rakuten Advertising - Node #027</h3>
+                <p>Verified enterprise execution node #027 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://rakutenadvertising.com?aff=damodar_empire&node=27" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="awin global network - node #028">
+            <div>
+                <h3>Awin Global Network - Node #028</h3>
+                <p>Verified enterprise execution node #028 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.awin.com?aff=damodar_empire&node=28" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="partnerstack saas hub - node #029">
+            <div>
+                <h3>PartnerStack SaaS Hub - Node #029</h3>
+                <p>Verified enterprise execution node #029 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://partnerstack.com?aff=damodar_empire&node=29" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="impact.com automation - node #030">
+            <div>
+                <h3>Impact.com Automation - Node #030</h3>
+                <p>Verified enterprise execution node #030 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://impact.com?aff=damodar_empire&node=30" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="maxbounty cpa platform - node #031">
+            <div>
+                <h3>MaxBounty CPA Platform - Node #031</h3>
+                <p>Verified enterprise execution node #031 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.maxbounty.com?aff=damodar_empire&node=31" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="amazon associates - node #032">
+            <div>
+                <h3>Amazon Associates - Node #032</h3>
+                <p>Verified enterprise execution node #032 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://affiliate-program.amazon.com?aff=damodar_empire&node=32" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="openai gpt-4o portal - node #033">
+            <div>
+                <h3>OpenAI GPT-4o Portal - Node #033</h3>
+                <p>Verified enterprise execution node #033 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.openai.com?aff=damodar_empire&node=33" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="anthropic claude console - node #034">
+            <div>
+                <h3>Anthropic Claude Console - Node #034</h3>
+                <p>Verified enterprise execution node #034 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.anthropic.com?aff=damodar_empire&node=34" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="groq lpu engine - node #035">
+            <div>
+                <h3>Groq LPU Engine - Node #035</h3>
+                <p>Verified enterprise execution node #035 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.groq.com?aff=damodar_empire&node=35" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="deepseek platform - node #036">
+            <div>
+                <h3>DeepSeek Platform - Node #036</h3>
+                <p>Verified enterprise execution node #036 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.deepseek.com?aff=damodar_empire&node=36" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="google ai studio - node #037">
+            <div>
+                <h3>Google AI Studio - Node #037</h3>
+                <p>Verified enterprise execution node #037 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://aistudio.google.com?aff=damodar_empire&node=37" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="hugging face hub - node #038">
+            <div>
+                <h3>Hugging Face Hub - Node #038</h3>
+                <p>Verified enterprise execution node #038 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://huggingface.co?aff=damodar_empire&node=38" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="elevenlabs voice ai - node #039">
+            <div>
+                <h3>ElevenLabs Voice AI - Node #039</h3>
+                <p>Verified enterprise execution node #039 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://elevenlabs.io?aff=damodar_empire&node=39" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="perplexity labs api - node #040">
+            <div>
+                <h3>Perplexity Labs API - Node #040</h3>
+                <p>Verified enterprise execution node #040 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.perplexity.ai?aff=damodar_empire&node=40" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="clickbank global marketplace - node #041">
+            <div>
+                <h3>ClickBank Global Marketplace - Node #041</h3>
+                <p>Verified enterprise execution node #041 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.clickbank.com?aff=damodar_empire&node=41" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="digistore24 top offers - node #042">
+            <div>
+                <h3>DigiStore24 Top Offers - Node #042</h3>
+                <p>Verified enterprise execution node #042 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.digistore24.com?aff=damodar_empire&node=42" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="jvzoo digital network - node #043">
+            <div>
+                <h3>JVZoo Digital Network - Node #043</h3>
+                <p>Verified enterprise execution node #043 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.jvzoo.com?aff=damodar_empire&node=43" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="warriorplus marketplace - node #044">
+            <div>
+                <h3>WarriorPlus Marketplace - Node #044</h3>
+                <p>Verified enterprise execution node #044 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com?aff=damodar_empire&node=44" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="shareasale merchant hub - node #045">
+            <div>
+                <h3>ShareASale Merchant Hub - Node #045</h3>
+                <p>Verified enterprise execution node #045 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.shareasale.com?aff=damodar_empire&node=45" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="cj affiliate partners - node #046">
+            <div>
+                <h3>CJ Affiliate Partners - Node #046</h3>
+                <p>Verified enterprise execution node #046 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.cj.com?aff=damodar_empire&node=46" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="rakuten advertising - node #047">
+            <div>
+                <h3>Rakuten Advertising - Node #047</h3>
+                <p>Verified enterprise execution node #047 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://rakutenadvertising.com?aff=damodar_empire&node=47" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="awin global network - node #048">
+            <div>
+                <h3>Awin Global Network - Node #048</h3>
+                <p>Verified enterprise execution node #048 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.awin.com?aff=damodar_empire&node=48" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="partnerstack saas hub - node #049">
+            <div>
+                <h3>PartnerStack SaaS Hub - Node #049</h3>
+                <p>Verified enterprise execution node #049 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://partnerstack.com?aff=damodar_empire&node=49" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="impact.com automation - node #050">
+            <div>
+                <h3>Impact.com Automation - Node #050</h3>
+                <p>Verified enterprise execution node #050 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://impact.com?aff=damodar_empire&node=50" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="maxbounty cpa platform - node #051">
+            <div>
+                <h3>MaxBounty CPA Platform - Node #051</h3>
+                <p>Verified enterprise execution node #051 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.maxbounty.com?aff=damodar_empire&node=51" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="amazon associates - node #052">
+            <div>
+                <h3>Amazon Associates - Node #052</h3>
+                <p>Verified enterprise execution node #052 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://affiliate-program.amazon.com?aff=damodar_empire&node=52" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="openai gpt-4o portal - node #053">
+            <div>
+                <h3>OpenAI GPT-4o Portal - Node #053</h3>
+                <p>Verified enterprise execution node #053 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.openai.com?aff=damodar_empire&node=53" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="anthropic claude console - node #054">
+            <div>
+                <h3>Anthropic Claude Console - Node #054</h3>
+                <p>Verified enterprise execution node #054 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.anthropic.com?aff=damodar_empire&node=54" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="groq lpu engine - node #055">
+            <div>
+                <h3>Groq LPU Engine - Node #055</h3>
+                <p>Verified enterprise execution node #055 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.groq.com?aff=damodar_empire&node=55" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="deepseek platform - node #056">
+            <div>
+                <h3>DeepSeek Platform - Node #056</h3>
+                <p>Verified enterprise execution node #056 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.deepseek.com?aff=damodar_empire&node=56" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="google ai studio - node #057">
+            <div>
+                <h3>Google AI Studio - Node #057</h3>
+                <p>Verified enterprise execution node #057 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://aistudio.google.com?aff=damodar_empire&node=57" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="hugging face hub - node #058">
+            <div>
+                <h3>Hugging Face Hub - Node #058</h3>
+                <p>Verified enterprise execution node #058 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://huggingface.co?aff=damodar_empire&node=58" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="elevenlabs voice ai - node #059">
+            <div>
+                <h3>ElevenLabs Voice AI - Node #059</h3>
+                <p>Verified enterprise execution node #059 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://elevenlabs.io?aff=damodar_empire&node=59" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="perplexity labs api - node #060">
+            <div>
+                <h3>Perplexity Labs API - Node #060</h3>
+                <p>Verified enterprise execution node #060 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.perplexity.ai?aff=damodar_empire&node=60" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="clickbank global marketplace - node #061">
+            <div>
+                <h3>ClickBank Global Marketplace - Node #061</h3>
+                <p>Verified enterprise execution node #061 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.clickbank.com?aff=damodar_empire&node=61" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="digistore24 top offers - node #062">
+            <div>
+                <h3>DigiStore24 Top Offers - Node #062</h3>
+                <p>Verified enterprise execution node #062 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.digistore24.com?aff=damodar_empire&node=62" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="jvzoo digital network - node #063">
+            <div>
+                <h3>JVZoo Digital Network - Node #063</h3>
+                <p>Verified enterprise execution node #063 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.jvzoo.com?aff=damodar_empire&node=63" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="warriorplus marketplace - node #064">
+            <div>
+                <h3>WarriorPlus Marketplace - Node #064</h3>
+                <p>Verified enterprise execution node #064 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com?aff=damodar_empire&node=64" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="shareasale merchant hub - node #065">
+            <div>
+                <h3>ShareASale Merchant Hub - Node #065</h3>
+                <p>Verified enterprise execution node #065 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.shareasale.com?aff=damodar_empire&node=65" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="cj affiliate partners - node #066">
+            <div>
+                <h3>CJ Affiliate Partners - Node #066</h3>
+                <p>Verified enterprise execution node #066 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.cj.com?aff=damodar_empire&node=66" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="rakuten advertising - node #067">
+            <div>
+                <h3>Rakuten Advertising - Node #067</h3>
+                <p>Verified enterprise execution node #067 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://rakutenadvertising.com?aff=damodar_empire&node=67" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="awin global network - node #068">
+            <div>
+                <h3>Awin Global Network - Node #068</h3>
+                <p>Verified enterprise execution node #068 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.awin.com?aff=damodar_empire&node=68" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="partnerstack saas hub - node #069">
+            <div>
+                <h3>PartnerStack SaaS Hub - Node #069</h3>
+                <p>Verified enterprise execution node #069 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://partnerstack.com?aff=damodar_empire&node=69" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="impact.com automation - node #070">
+            <div>
+                <h3>Impact.com Automation - Node #070</h3>
+                <p>Verified enterprise execution node #070 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://impact.com?aff=damodar_empire&node=70" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="maxbounty cpa platform - node #071">
+            <div>
+                <h3>MaxBounty CPA Platform - Node #071</h3>
+                <p>Verified enterprise execution node #071 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.maxbounty.com?aff=damodar_empire&node=71" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="amazon associates - node #072">
+            <div>
+                <h3>Amazon Associates - Node #072</h3>
+                <p>Verified enterprise execution node #072 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://affiliate-program.amazon.com?aff=damodar_empire&node=72" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="openai gpt-4o portal - node #073">
+            <div>
+                <h3>OpenAI GPT-4o Portal - Node #073</h3>
+                <p>Verified enterprise execution node #073 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.openai.com?aff=damodar_empire&node=73" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="anthropic claude console - node #074">
+            <div>
+                <h3>Anthropic Claude Console - Node #074</h3>
+                <p>Verified enterprise execution node #074 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.anthropic.com?aff=damodar_empire&node=74" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="groq lpu engine - node #075">
+            <div>
+                <h3>Groq LPU Engine - Node #075</h3>
+                <p>Verified enterprise execution node #075 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.groq.com?aff=damodar_empire&node=75" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="deepseek platform - node #076">
+            <div>
+                <h3>DeepSeek Platform - Node #076</h3>
+                <p>Verified enterprise execution node #076 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.deepseek.com?aff=damodar_empire&node=76" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="google ai studio - node #077">
+            <div>
+                <h3>Google AI Studio - Node #077</h3>
+                <p>Verified enterprise execution node #077 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://aistudio.google.com?aff=damodar_empire&node=77" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="hugging face hub - node #078">
+            <div>
+                <h3>Hugging Face Hub - Node #078</h3>
+                <p>Verified enterprise execution node #078 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://huggingface.co?aff=damodar_empire&node=78" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="elevenlabs voice ai - node #079">
+            <div>
+                <h3>ElevenLabs Voice AI - Node #079</h3>
+                <p>Verified enterprise execution node #079 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://elevenlabs.io?aff=damodar_empire&node=79" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="perplexity labs api - node #080">
+            <div>
+                <h3>Perplexity Labs API - Node #080</h3>
+                <p>Verified enterprise execution node #080 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.perplexity.ai?aff=damodar_empire&node=80" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="clickbank global marketplace - node #081">
+            <div>
+                <h3>ClickBank Global Marketplace - Node #081</h3>
+                <p>Verified enterprise execution node #081 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.clickbank.com?aff=damodar_empire&node=81" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="digistore24 top offers - node #082">
+            <div>
+                <h3>DigiStore24 Top Offers - Node #082</h3>
+                <p>Verified enterprise execution node #082 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.digistore24.com?aff=damodar_empire&node=82" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="jvzoo digital network - node #083">
+            <div>
+                <h3>JVZoo Digital Network - Node #083</h3>
+                <p>Verified enterprise execution node #083 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.jvzoo.com?aff=damodar_empire&node=83" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="warriorplus marketplace - node #084">
+            <div>
+                <h3>WarriorPlus Marketplace - Node #084</h3>
+                <p>Verified enterprise execution node #084 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com?aff=damodar_empire&node=84" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="shareasale merchant hub - node #085">
+            <div>
+                <h3>ShareASale Merchant Hub - Node #085</h3>
+                <p>Verified enterprise execution node #085 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.shareasale.com?aff=damodar_empire&node=85" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="cj affiliate partners - node #086">
+            <div>
+                <h3>CJ Affiliate Partners - Node #086</h3>
+                <p>Verified enterprise execution node #086 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.cj.com?aff=damodar_empire&node=86" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="rakuten advertising - node #087">
+            <div>
+                <h3>Rakuten Advertising - Node #087</h3>
+                <p>Verified enterprise execution node #087 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://rakutenadvertising.com?aff=damodar_empire&node=87" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="awin global network - node #088">
+            <div>
+                <h3>Awin Global Network - Node #088</h3>
+                <p>Verified enterprise execution node #088 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.awin.com?aff=damodar_empire&node=88" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="partnerstack saas hub - node #089">
+            <div>
+                <h3>PartnerStack SaaS Hub - Node #089</h3>
+                <p>Verified enterprise execution node #089 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://partnerstack.com?aff=damodar_empire&node=89" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="impact.com automation - node #090">
+            <div>
+                <h3>Impact.com Automation - Node #090</h3>
+                <p>Verified enterprise execution node #090 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://impact.com?aff=damodar_empire&node=90" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="maxbounty cpa platform - node #091">
+            <div>
+                <h3>MaxBounty CPA Platform - Node #091</h3>
+                <p>Verified enterprise execution node #091 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.maxbounty.com?aff=damodar_empire&node=91" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="amazon associates - node #092">
+            <div>
+                <h3>Amazon Associates - Node #092</h3>
+                <p>Verified enterprise execution node #092 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://affiliate-program.amazon.com?aff=damodar_empire&node=92" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="openai gpt-4o portal - node #093">
+            <div>
+                <h3>OpenAI GPT-4o Portal - Node #093</h3>
+                <p>Verified enterprise execution node #093 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.openai.com?aff=damodar_empire&node=93" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="anthropic claude console - node #094">
+            <div>
+                <h3>Anthropic Claude Console - Node #094</h3>
+                <p>Verified enterprise execution node #094 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.anthropic.com?aff=damodar_empire&node=94" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="groq lpu engine - node #095">
+            <div>
+                <h3>Groq LPU Engine - Node #095</h3>
+                <p>Verified enterprise execution node #095 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://console.groq.com?aff=damodar_empire&node=95" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="deepseek platform - node #096">
+            <div>
+                <h3>DeepSeek Platform - Node #096</h3>
+                <p>Verified enterprise execution node #096 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://platform.deepseek.com?aff=damodar_empire&node=96" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="google ai studio - node #097">
+            <div>
+                <h3>Google AI Studio - Node #097</h3>
+                <p>Verified enterprise execution node #097 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://aistudio.google.com?aff=damodar_empire&node=97" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="hugging face hub - node #098">
+            <div>
+                <h3>Hugging Face Hub - Node #098</h3>
+                <p>Verified enterprise execution node #098 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://huggingface.co?aff=damodar_empire&node=98" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="elevenlabs voice ai - node #099">
+            <div>
+                <h3>ElevenLabs Voice AI - Node #099</h3>
+                <p>Verified enterprise execution node #099 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://elevenlabs.io?aff=damodar_empire&node=99" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="perplexity labs api - node #100">
+            <div>
+                <h3>Perplexity Labs API - Node #100</h3>
+                <p>Verified enterprise execution node #100 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.perplexity.ai?aff=damodar_empire&node=100" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="clickbank global marketplace - node #101">
+            <div>
+                <h3>ClickBank Global Marketplace - Node #101</h3>
+                <p>Verified enterprise execution node #101 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.clickbank.com?aff=damodar_empire&node=101" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="digistore24 top offers - node #102">
+            <div>
+                <h3>DigiStore24 Top Offers - Node #102</h3>
+                <p>Verified enterprise execution node #102 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.digistore24.com?aff=damodar_empire&node=102" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="jvzoo digital network - node #103">
+            <div>
+                <h3>JVZoo Digital Network - Node #103</h3>
+                <p>Verified enterprise execution node #103 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.jvzoo.com?aff=damodar_empire&node=103" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="warriorplus marketplace - node #104">
+            <div>
+                <h3>WarriorPlus Marketplace - Node #104</h3>
+                <p>Verified enterprise execution node #104 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com?aff=damodar_empire&node=104" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+        <div class="card" data-name="shareasale merchant hub - node #105">
+            <div>
+                <h3>ShareASale Merchant Hub - Node #105</h3>
+                <p>Verified enterprise execution node #105 optimized for high-conversion traffic routing and instant commissions.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.shareasale.com?aff=damodar_empire&node=105" target="_blank" class="btn-explore">Access Portal &rarr;</a>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- Restored 5-Star Testimonials Section -->
+    <div class="testimonials-section">
+        <div class="section-title">Trusted by Elite Digital Entrepreneurs</div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Damodar Tech Craze has completely streamlined our high-ticket affiliate funnel routing. The direct secure node access is unmatched!"</p>
+                <div class="author">Alex V.</div>
+                <div class="role">Enterprise Media Buyer, New York</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"The latency on these AI infrastructure nodes is blazing fast. Absolute game-changer for our automated software deployments."</p>
+                <div class="author">Rajesh K.</div>
+                <div class="role">Lead AI Architect, Mumbai</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Clean, lightning-fast, and luxury design. The direct affiliate redirection vaults make scaling campaigns effortless."</p>
+                <div class="author">Carlos M.</div>
+                <div class="role">Global Growth Partner, Miami</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ai-concierge" onclick="alert('Damodar AI Concierge: All 100+ affiliate portals are clean, verified, and fully active.')">
+        🤖 Damodar AI Concierge
+    </div>
+
+    <footer>
+        &copy; 2026 Damodar Tech Craze. All rights reserved. Ultra-Luxury Autonomous Architecture.
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.card');
+
+        searchInput.addEventListener('input', (e) => {
+            const val = e.target.value.toLowerCase();
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                card.style.display = text.includes(val) ? 'flex' : 'none';
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                searchInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>
